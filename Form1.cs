@@ -1,3 +1,4 @@
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace BakeTool
@@ -7,6 +8,8 @@ namespace BakeTool
         public Form1()
         {
             InitializeComponent();
+
+            this.Text += $" ({typeof(Form1).Assembly.GetName().Version})";
         }
 
         private void button1_Click(object sender, EventArgs e)
